@@ -51,3 +51,20 @@ O sistema sera contruído com uma camada de front(console - java), back e banco 
 A camada de front será responsável por interagir com o usuário, permitindo o cadastro de profissionais, aditivos e descontos, bem como a geração da folha de pagamento. A camada de back será responsável por processar as informações, realizar os cálculos necessários e gerar os holerites. O banco de dados armazenará todas as informações relacionadas aos profissionais, aditivos, descontos e folhas de pagamento.
 A camada de back deverá fazer as validações necessárias para garantir a integridade dos dados e a consistência das informações, bem como uma camada identificando as entidades do sistema, uma camada representando acesso ao banco de dados com DAO e uma camada de serviços para realizar as operações de negócio.
 Além disso, o sistema deve ser projetado de forma modular, permitindo futuras expansões e melhorias.
+
+## Estrutura de pacotes
+
+O código-fonte do back-end está organizado nos seguintes pacotes, dentro de `src/main/java/br/edu/imepac/folhapagamento`:
+
+```
+br.edu.imepac.folhapagamento
+├── config          # Configurações gerais da aplicação Spring Boot
+├── controlles      # Controladores REST (endpoints da API)
+├── dtos            # Objetos de transferência de dados (DTOs)
+├── entities        # Entidades JPA mapeadas para o banco de dados
+├── repositories    # Interfaces de acesso a dados (Spring Data JPA)
+├── services        # Regras de negócio e cálculos da folha de pagamento
+└── utils           # Classes utilitárias e helpers
+```
+
+Cada pacote possui um `README.md` próprio descrevendo seu objetivo com mais detalhes.
