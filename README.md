@@ -47,9 +47,9 @@ Uma vez concluído o cadastro dos profissionais, aditivos e descontos, o sistema
 
 ## Arquitetura do sistema
 
-O sistema sera contruído com uma camada de front(console - java), back e banco de dados.
-A camada de front será responsável por interagir com o usuário, permitindo o cadastro de profissionais, aditivos e descontos, bem como a geração da folha de pagamento. A camada de back será responsável por processar as informações, realizar os cálculos necessários e gerar os holerites. O banco de dados armazenará todas as informações relacionadas aos profissionais, aditivos, descontos e folhas de pagamento.
-A camada de back deverá fazer as validações necessárias para garantir a integridade dos dados e a consistência das informações, bem como uma camada identificando as entidades do sistema, uma camada representando acesso ao banco de dados com DAO e uma camada de serviços para realizar as operações de negócio.
+O sistema será construído como uma **API REST**, desenvolvida em Java com Spring Boot, responsável por processar as informações, realizar os cálculos necessários e gerar os holerites. O consumo da API (cadastro de profissionais, aditivos, descontos e geração da folha de pagamento) fica a cargo de um cliente externo, que se comunica com o back-end por meio dos endpoints HTTP expostos. O banco de dados armazenará todas as informações relacionadas aos profissionais, aditivos, descontos e folhas de pagamento.
+
+A API deverá fazer as validações necessárias para garantir a integridade dos dados e a consistência das informações, sendo organizada em camadas: uma camada de controllers responsável por expor os endpoints REST, uma camada de entidades identificando o domínio do sistema, uma camada de repositories responsável pelo acesso ao banco de dados (Spring Data JPA) e uma camada de services para realizar as operações de negócio.
 Além disso, o sistema deve ser projetado de forma modular, permitindo futuras expansões e melhorias.
 
 ## Estrutura de pacotes
