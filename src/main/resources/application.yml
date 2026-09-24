@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: folhapagamento
+  datasource:
+    url: jdbc:mysql://localhost:3306/folhapagamento
+    username: folhapagamento
+    password: folhapagamento
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
